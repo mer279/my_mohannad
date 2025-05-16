@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المهندس مهند العواضي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* إعدادات عامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            line-height: 1.6;
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        /* ترويسة الصفحة */
+        header {
+            background: #000 url('https://via.placeholder.com/1600x800/000000/808080/?text=Header%20Image') no-repeat center center/cover;
+            color: #fff;
+            padding: 200px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 6px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        header h1 {
+            font-size: 4.5em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow: 4px 4px 30px rgba(0, 0, 0, 0.8);
+        }
+
+        header p {
+            font-size: 1.6em;
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        /* شريط التنقل */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 15px 0;
+            z-index: 10;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 25px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 5px 0;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+            border-bottom: 2px solid #f39c12;
+        }
+
+        /* قسم عن المهندس */
+        .about {
+            padding: 150px 20px;
+            background: linear-gradient(45deg, rgba(19, 19, 19, 0.9), rgba(0, 0, 0, 0.9));
+            text-align: center;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .about h2 {
+            font-size: 2.8em;
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #bbb;
+            line-height: 1.8;
+        }
+
+        /* قسم تواصل */
+        .contact {
+            padding: 120px 20px;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #f39c12;
+        }
+
+        .contact form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border: 1px solid #444;
+            background-color: #333;
+            color: #fff;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .contact input:focus, .contact textarea:focus {
+            outline: none;
+            border-color: #f39c12;
+            background-color: #444;
+        }
+
+        .contact button {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact button:hover {
+            background-color: #e67e22;
+        }
+
+        /* التأثيرات المتحركة */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* الفوتر */
+        footer {
+            background-color: #222;
+            color: #888;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #e67e22;
+        }
+
+        /* تحسينات للأجهزة الصغيرة */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3.5em;
+            }
+
+            header p {
+                font-size: 1.3em;
+            }
+
+            .about h2, .contact h2 {
+                font-size: 2.5em;
+            }
+
+            .contact form {
+                padding: 30px;
+            }
+
+            .contact input, .contact textarea {
+                padding: 12px;
+            }
+
+            .contact button {
+                font-size: 1em;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#about">عن المهندس</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- هيدر الصفحة -->
+    <header id="home">
+        <h1>مهندس مهند العواضي</h1>
+        <p>ابتكار وتطوير الحلول الهندسية الحديثة</p>
+    </header>
+
+    <!-- قسم عن المهندس -->
+    <section class="about" id="about">
+        <h2>عن المهندس مهند العواضي</h2>
+        <p> مهندس متخصص في [أنشاء صفحات الويب بلغات عديده] أعمل على تقديم حلول هندسية مبتكرة تعتمد على أحدث التقنيات والمعايير العالمية. التزامي بالتميز والجودة هو أساس كل مشروع.</p>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section class="contact" id="contact">
+        <h2>تواصل معنا</h2>
+        <form action="mhndalwady59@gmail.com     ">
+            <input type="text" name="name" placeholder="اسمك الكامل" required>
+            <input type="email" name="email" placeholder="بريدك الإلكتروني" required>
+            <textarea name="message" placeholder="رسالتك" rows="5" required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2025 مهندس مهند العواضي. جميع الحقوق محفوظة.</p>
+        <p><a href="#">سياسة الخصوصية</a> | <a href="#">الشروط والأحكام</a></p>
+    </footer>
+
+</body>
+</html>
